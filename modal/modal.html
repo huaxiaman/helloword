@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>modal</title>
+	<script src="jquery.min.js"></script>
+	<script src="modal.js"></script>
+	<link rel = "stylesheet" href="modal.css" />
+</head>
+<body>
+	<div id="shade"></div>
+	<a class="hh" href="#none;">llll</a><br>
+	<a class="vv" href="#none;">222</a>
+</body>
+<script type="text/javascript">
+	$('.hh').on('click',function(){
+		var opt = {
+			id:'#shade',
+			//boxColor: '#fff',
+			//innerColor: '#fff',
+			//fontColor: '#666',
+			//padding: '10',
+			width: 300,
+			height: 100,
+			html: "<p>哈哈哈</p>"
+		};
+		var a = new Modal(opt).init().show();
+	})
+
+	$('.vv').on('click',function(){
+		var opt = {
+			id:'#shade',//必须设置
+			//boxColor: '#fff',
+			//innerColor: '#19de85',
+			//fontColor: '#ccc',
+			//border: '1px solid #f00',
+			padding: '20',
+			width: 300,
+			height: 300,
+			html: "<p>哈哈哈哈哈哈哈哈哈哈哈哈</p>"
+		};
+		var a = new Modal(opt).init().show();
+	})
+</script>
+</html>
